@@ -35,4 +35,9 @@ public class ServiceTransacao {
         return transacao;
     }
 
+
+    public void deletarTransacoes(){
+        mapTransacoes.clear();
+    }
+
 }

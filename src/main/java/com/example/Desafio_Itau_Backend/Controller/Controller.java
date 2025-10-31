@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/transacao")
@@ -21,5 +22,12 @@ public class Controller {
         service.processarTransacao(transacao);
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+
+    @DeleteMapping
+    public ResponseEntity<Void> deletarTransacoes(){
+        service.deletarTransacoes();
+        return ResponseEntity.ok().build();
     }
 }
